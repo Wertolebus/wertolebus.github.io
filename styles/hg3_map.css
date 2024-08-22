@@ -1,0 +1,52 @@
+#content {
+    align-items: center;
+    background-image: url("../images/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: #1a1a1a;
+    /* background-color: #ff0000; */
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+
+.map {
+    scale: .8;
+    padding: 20px 150px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    border-color: rgba(255, 255, 255, .1);
+    border-style: solid;
+    border-width: 2px;
+    backdrop-filter: blur(10px);
+}
+
+.country {
+    fill: rgb(75, 75, 75);
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    transition: .2s;
+}
+
+.country:hover {
+    fill: rgb(180, 180, 180);
+}
+
+#tooltip {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 64px;
+    z-index: 5;
+    width: 100px; height: 24px;
+    user-select: none;
+    pointer-events: none;
+}
+
+#tooltip-span {
+    font-size: 24px;
+}
