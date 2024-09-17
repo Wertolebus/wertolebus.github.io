@@ -9,6 +9,4 @@ document.addEventListener('mousemove', function(e) {
             div.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(145,145,145,.3) 0%, rgba(70,70,70,.1) 30%, rgba(0,0,0,0) 50%)`        
         })        
     })
-
-    
 })
