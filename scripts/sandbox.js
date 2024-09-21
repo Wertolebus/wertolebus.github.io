@@ -7,6 +7,10 @@ let boardW = board.width
 let boardH = board.height
 let data = Array.from(Array(Math.round(boardH)).fill(0), () => new Array(Math.round(boardW)).fill(0))
 
+let _mousestate = -1
+const _FPS_DIVIDE = 1800
+let FPS = 60
+
 function redraw() {
     d.clearRect(0, 0, boardW, boardH)
     for(let y = 0; y < data.length-1;++y){
@@ -25,7 +29,7 @@ function updatePhysics(){
     redraw()
 
     for(let y = data.length - 3; y >= 0; --y) {
-        for(let x = 1; x < data[y].length - 1; ++x) {
+        for(let x = 0; x < data[y].length; ++x) {
             if(data[y][x] == 1) {
                 if (y < data.length) {
                     if (data[y+1][x] == 1 && data[y+1][x+1] == 0) {
@@ -58,21 +62,48 @@ function getMousePos(canvas, evt) {
     }
 }
 
-board.addEventListener('click', function(e) {
-    let pos = getMousePos(board, e)
-    if (pos.x > 0 && pos.x < data[pos.y].length - 1) {
-        data[pos.y][pos.x] = 1
+
+board.addEventListener('mousedown', (e) => {
+    e.button == 0 || e.button == 2 ? _mousestate = e.button : _mousestate = -1
+})
+
+document.addEventListener('mouseup', () => { _mousestate = -1 })
+
+board.addEventListener('mousemove', function(e) {
+    if (_mousestate == 0) {
+        let pos = getMousePos(board, e)
+        if (pos.x >= 0 && pos.x < data[pos.y].length)
+            data[pos.y][pos.x] = 1
+    }else if (_mousestate == 2) {
+        let pos = getMousePos(board, e)
+        if (pos.x >= 0 && pos.x < data[pos.y].length)
+            data[pos.y][pos.x] = 0
     }
 })
 
 
-board.addEventListener('contextmenu', function(e) {
-    let pos = getMousePos(board, e)
-    if (pos.x > 0 && pos.x < data[pos.y].length - 1) {
-        data[pos.y][pos.x] = 0
-    }
-})
+// let physics = setInterval(function() {
+    // updatePhysics()
+// }, _FPS_DIVIDE/FPS)
 
-const interval = setInterval(function() {
+function save_settings() {
+    FPS = document.querySelector("#fps-input").value
+}
+
+function hide_settings() {
+    document.querySelector("#settings").style.opacity = 0
+    document.querySelector("#settings-panel-button").style.opacity = 1
+}
+
+function show_settings() {
+    document.querySelector("#settings").style.opacity = 1
+    document.querySelector("#settings-panel-button").style.opacity = 0
+}
+
+let physics
+function repeat(){
     updatePhysics()
-}, 30)
+    physics = setTimeout(repeat, _FPS_DIVIDE/FPS)
+}
+
+repeat()
