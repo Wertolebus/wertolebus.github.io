@@ -5,9 +5,6 @@ function setCookies() {
     else {
         document.cookie = "compatibility=true; SameSite=None"
     }
-    console.log(document.cookie);
-
-
     let cb = document.querySelector(".compatibility-button")
 
     if (document.cookie.includes("compatibility=true")) {
@@ -48,14 +45,18 @@ if (cb) {
 }
 
 function setActiveStyleSheet(title) {
-    var i, a, main;
+    var i, a;
     for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
         if(a.getAttribute("rel").indexOf("style") != -1
             && a.getAttribute("title")) {
             a.disabled = true;
             if(a.getAttribute("title") == title) a.disabled = false;
-            console.log(title);
         }
     }
     
+}
+
+
+if (navigator.userAgent.includes("Chrome")) {
+    document.querySelector("#back-button").style.opacity = 0
 }
