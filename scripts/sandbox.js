@@ -25,6 +25,18 @@ function redraw() {
     }
 }
 
+function mousedown() {
+    if (_mousestate == 0) {
+        let pos = getMousePos(board, e)
+        if (pos.x >= 0 && pos.x < data[pos.y].length)
+            data[pos.y][pos.x] = 1
+    }else if (_mousestate == 2) {
+        let pos = getMousePos(board, e)
+        if (pos.x >= 0 && pos.x < data[pos.y].length)
+            data[pos.y][pos.x] = 0
+    }
+}
+
 function updatePhysics(){
     redraw()
 
@@ -105,5 +117,6 @@ function repeat(){
     updatePhysics()
     physics = setTimeout(repeat, _FPS_DIVIDE/FPS)
 }
+
 
 repeat()

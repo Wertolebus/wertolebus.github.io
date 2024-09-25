@@ -6,11 +6,12 @@
     <title>sandbox</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/sandbox.css">
+    <link rel="stylesheet alt" href="../styles/compatibility.css" title="compatibility">
 </head>
 <script src="../scripts/device-detector.js"></script>
 <body>
     <div id="settings">
-        <div class="dimmed-bg"></div>
+        <div class="dimmed-bg blurred-10px blur-color"></div>
         <div id="settings-panel">
             <span class="bold-font text-50">FPS </span> <input type="number" id="fps-input" class="thin-font" value="60"> <br>
             <div class="bold-font text-50" id="settings-save-button" onclick="save_settings()" style="left: 0;">Save settings</div>
@@ -21,12 +22,12 @@
         <div id="back-button">
             <a href="../index.html"><span class="text-50 thin-font">Return to main page</span></a>
         </div>
-        <div id="board-div" oncontextmenu="return false;">
+        <div id="board-div" class="blurred-10px blur-color" oncontextmenu="return false;">
             <canvas id="board" width="70%" height="32"></canvas>
         </div>
-
     </div>
-    <div id="settings-panel-button" class="text-50 bold-font" onclick="show_settings()">settings</div>
+    <div id="settings-panel-button" class="button text-50 bold-font" onclick="show_settings()"><span id="settings-button">settings</span></div>
 </body>
 <script src="../scripts/sandbox.js"></script>
+<script src="../scripts/compatibility.js"></script>
 </html>
