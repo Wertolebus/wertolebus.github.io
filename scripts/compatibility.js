@@ -58,5 +58,5 @@ function setActiveStyleSheet(title) {
 
 
 if (navigator.userAgent.includes("Chrome")) {
-    document.querySelector("#back-button").style.opacity = 0
+    document.querySelector("#compatibility").style.opacity = 0
 }
