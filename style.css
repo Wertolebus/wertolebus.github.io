@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Iosevka;
+    src: url('./Iosevka.ttf');
+}
+
+* {
+    font-family: Iosevka;
+    color: #ddd;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.title {
+    position: relative;
+    font-size: 48px;
+    border-bottom: 5px solid #72f43c;
+    transition: .2s;
+}
+
+.title:hover {
+    font-size: 64px;
+    border-bottom: 5px solid #ffdd33;
+    transition: .5s;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    position: relative;
+    margin: 10px -32px;
+}
+
+a {
+    font-size: 32px;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.ref {
+    border-bottom: 5px solid #73c936;
+    transition: .2s;
+}
+
+li:hover a {
+    transition: .5s;
+    font-size: 48px;
+    border-color: #ddd;
+}
+
+body:has(.title:hover) .ref {
+    border-bottom: 5px solid #ffdd33;
+    transition: .5s;
+}
