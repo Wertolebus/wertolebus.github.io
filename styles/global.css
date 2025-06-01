@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Iosevka;
+    src: url('../assets/fonts/Iosevka.ttf');
+}
+
+* {
+    font-family: Iosevka;
+    color: #ddd;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+}
