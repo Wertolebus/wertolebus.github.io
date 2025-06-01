@@ -6,6 +6,7 @@
 * {
     font-family: Iosevka;
     color: #ddd;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,4 +14,19 @@ body {
     background-color: #181818;
     display: flex;
     justify-content: center;
+}
+
+#container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+}
+
+#header *:first-child:nth-last-child(2) {
+    margin: 0 20px;
 }

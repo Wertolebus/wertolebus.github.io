@@ -1,20 +1,8 @@
-#container {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-}
-
 .title {
     position: relative;
     font-size: 48px;
     border-bottom: 5px solid #72f43c;
     transition: .2s;
-}
-
-.title:hover {
-    font-size: 64px;
-    border-bottom: 5px solid #ffdd33;
-    transition: .5s;
 }
 
 ul {
@@ -23,7 +11,7 @@ ul {
 
 li {
     position: relative;
-    margin: 10px -32px;
+    margin: 30px -32px;
 }
 
 a {
@@ -38,12 +26,11 @@ a {
 }
 
 li:hover a {
-    transition: .5s;
+    box-sizing: content;
+    padding: 10px;
+    margin: 500px 0;
     font-size: 48px;
-    border-color: #ddd;
-}
-
-body:has(.title:hover) .ref {
-    border-bottom: 5px solid #ffdd33;
-    transition: .5s;
+    background-color: #2d2d2d;
+    border: none;
+    border-radius: 25px;
 }
