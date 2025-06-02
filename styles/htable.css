@@ -28,7 +28,7 @@ body:has(.title:hover) #back {
 }
 
 #gallery img {
-    margin: 10px;
+    margin: 5px;
     height: 200px;
     width: auto;
     z-index: 0;
