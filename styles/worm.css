@@ -6,7 +6,7 @@
     width: 128px;
 }
 
-#worm:active {
+#worm:hover {
     content: url("/assets/images/cherw.gif");
 }
 
