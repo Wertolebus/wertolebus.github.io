@@ -30,3 +30,19 @@ body {
 #header *:first-child:nth-last-child(2) {
     margin: 0 20px;
 }
+
+#back {
+    font-size: 48px;
+    padding: 0 24px;
+}
+
+#back:hover {
+    font-size: 64px;
+    background-color: #2d2d2d;
+    border-radius: 25px;
+}
+
+body:has(.title:hover) #back {
+    font-size: 64px;
+    transition: .5s;
+}
