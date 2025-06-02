@@ -1,7 +1,13 @@
 #worm {
+    content: url("/assets/images/favicon.png");
+    user-select: none;
     position: relative;
     top: 64px;
     width: 128px;
+}
+
+#worm:active {
+    content: url("/assets/images/cherw.gif");
 }
 
 #worm-container {
