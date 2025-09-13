@@ -1,3 +1,19 @@
+#back {
+    font-size: 48px;
+    padding: 0 24px;
+}
+
+#back:hover {
+    font-size: 64px;
+    background-color: #2d2d2d;
+    border-radius: 25px;
+}
+
+body:has(.title:hover) #back {
+    font-size: 64px;
+    transition: .5s;
+}
+
 #gallery {
     display: flex;
     flex-wrap: wrap;
