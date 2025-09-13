@@ -25,6 +25,33 @@ a {
     transition: .2s;
 }
 
+#container {
+    width: 60%;
+}
+
+#global-container {
+    display: flex;
+}
+
+#img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px 50px;
+    background-color: #2d2d2d;
+}
+
+.img {
+    border-radius: 10px;
+    max-width: 350px;
+}
+
+#left {
+    width: 70%;
+}
+
 li:hover a {
     box-sizing: content;
     padding: 10px;
