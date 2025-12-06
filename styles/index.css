@@ -41,63 +41,42 @@ body {
 
 #username {
     font-size: 48px;
-    border-bottom: 5px solid #72f43c;
-    transition: .2s;
+    margin: 20px 0;
 }
 
-ul {
-    list-style-type: none;
+#avatar {
+    width: 256px; height: 256px;
+    border-radius: 100%;
 }
 
-li {
+#avatar, #username {
+    border: 0px #ddd solid;
+    transition: .1s;
+}
+
+#avatar:hover {
+    border: 3px #dddddd solid;
+}
+
+#username:hover {
+    border-bottom: 3px #dddddd solid;
+}
+
+#cherw {
+    content: url("/assets/cherw.png");
+    user-select: none;
     position: relative;
-    margin: 30px -32px;
+    width: 128px;
 }
 
-a {
-    font-size: 32px;
-    transition: .2s;
-    text-decoration: none;
+#cherw:hover {
+    content: url("/assets/cherw.gif");
+    width: 128px;
 }
 
-.ref {
-    border-bottom: 5px solid #73c936;
-    transition: .2s;
-}
-
-#container {
-    width: 60%;
-}
-
-#global-container {
-    display: flex;
-}
-
-#img-container {
-    display: flex;
-    flex-direction: column;
+#cherw-container {
+    display: none;
+    transition: .15s;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    padding: 15px 50px;
-    background-color: #2d2d2d;
-}
-
-.img {
-    border-radius: 10px;
-    max-width: 350px;
-}
-
-#left {
-    width: 70%;
-}
-
-li:hover a {
-    box-sizing: content;
-    padding: 10px;
-    margin: 500px 0;
-    font-size: 48px;
-    background-color: #2d2d2d;
-    border: none;
-    border-radius: 25px;
 }

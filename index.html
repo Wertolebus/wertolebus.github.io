@@ -3,34 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="zboxjpg, wertolebus">
+    <meta name="description" content="фурион фурион штопанный гандон">
+    <link rel="stylesheet" href="styles/index.css">
     <title>zboxjpg</title>
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
-    <script src="/assets/scripts/comp.js"></script>
 </head>
-<body>
-    <div id="container">
-        <div id="header">
-            <h1 class="title">zboxjpg</h1>
-        </div>
-        <div id="global-container">
-            <div id="left">
-                <ul>
-                    <li><a href="#" class="ref">discord: @zboxjpg</a></li>
-                    <li><a href="https://www.youtube.com/@zboxjpg" class="ref">youtube</a></li>
-                    <li><a href="https://github.com/wertolebus/" class="ref">github</a></li>
-                    <li><a href="#" class="ref">Gallery (MAINTANCE)</a></li>
-                    <li><a href="/pages/worm.html" class="ref"><img src="/assets/images/favicon.png" style="width: 48px"></a></li>
-                </ul>    
-            </div>
-            <div id="right">
-                <div id="img-container">
-                    <div id="img-header"><h1>Today's image</h1></div>
-                </div>
-            </div>
+<body onmousemove="get_mouse_pos(event)">
+    <div id="card">
+        <div id="pfp">
+            <img src="./assets/avatar.png" alt="avatar" id="avatar" onclick="toggle()">
+            <div id="cherw-container"><img src="assets/cherw.png" id="cherw" onclick="toggle()"></div>
+            <span id="username">zboxjpg</span>
         </div>
     </div>
 </body>
-<script src="/assets/scripts/todayimg.js"></script>
+<script src="./scripts/main.js"></script>
 </html>
