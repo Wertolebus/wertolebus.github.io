@@ -108,6 +108,36 @@ body {
     }
 }
 
+@media (width > 450px) and (orientation: portrait) and (width < 1280px){
+    #card {
+        width: 450px;
+        height: 450px;
+        backdrop-filter: blur(2px);
+        border-radius: 75px;
+    }
+    
+    #pfp {
+        height: 450px;
+    }
+
+    #username {
+        font-size: 32px;
+    }
+
+    #avatar {
+        width: 128px; height: 128px;
+    }
+
+    #cherw, #cherw:hover {
+        width: 64px;
+        width: 64px;
+    }
+
+    #username {
+        margin: 10px 0;
+    }
+}
+
 #card {
     position: absolute;
     top: 50%; left: 50%;
@@ -115,6 +145,7 @@ body {
     border: 3px #4d4d4d7f solid;
     background-color: #2c2c2c7f;
     box-shadow: 0px 0px 100px 27px #0000009d;
+    transition: .2s;
 }
 
 #pfp {
@@ -122,6 +153,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: .2s;
 }
 
 #avatar {
