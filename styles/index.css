@@ -1,6 +1,6 @@
 @font-face {
     font-family: Iosevka;
-    src: url('../assets/');
+    src: url('/assets/Iosevka.ttf');
 }
 
 * {
@@ -13,7 +13,7 @@
 
 body {
     background-color: #181818ff;
-    background-image: url('../assets/background.jpg');
+    background-image: url('/assets/background.jpg');
     background-size: cover;
     width: 100%; height: 100%; position: absolute;
 } 
