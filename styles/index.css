@@ -26,19 +26,18 @@ body {
         border-radius: 100px;
     }
 
-    #changelog-card { font-size: 36px;}
+    #changelog-card { font-size: 36px; }
     
     .button {
         top: 40px; right: 40px;
         border-radius: 100px;
     }
     
-    #pfp {
-        height: 800px;
-    }
+    #pfp { height: 800px; }
 
     #username {
         font-size: 48px;
+        margin: 20px 0;
     }
 
     #avatar {
@@ -50,10 +49,12 @@ body {
         width: 128px;
     }
 
-    #username {
-        margin: 20px 0;
-    }
+    #links { flex-direction: row; }
 
+    #links:hover {
+        width: 240px;
+        padding: 0 20px;
+    }
 }
 
 @media (width <= 450px) {
@@ -64,7 +65,7 @@ body {
         border-radius: 75px;
     }
 
-    #changelog-card { font-size: 24px;}
+    #changelog-card { font-size: 24px; }
 
     .button {
         top: 20px; right: 20px;
@@ -72,16 +73,13 @@ body {
         z-index: 2;
     } 
 
-    #close {
-        width: 36px;
-    }
+    #close { width: 36px; }
     
-    #pfp {
-        height: 400px;
-    }
+    #pfp { height: 400px; }
 
     #username {
         font-size: 36px;
+        margin: 10px 0;
     }
 
     #avatar {
@@ -91,10 +89,6 @@ body {
     #cherw, #cherw:hover {
         width: 64px;
         width: 64px;
-    }
-
-    #username {
-        margin: 10px 0;
     }
 }
 
@@ -106,23 +100,20 @@ body {
         border-radius: 75px;
     }
     
-    #changelog-card { font-size: 24px;}
+    #changelog-card { font-size: 24px; }
 
     .button {
         top: 40px; right: 40px;
         border-radius: 75px;
     }
     
-    #close {
-        width: 24px;
-    }
+    #close { width: 24px; }
 
-    #pfp {
-        height: 300px;
-    }
+    #pfp { height: 300px; }
 
     #username {
         font-size: 24px;
+        margin: 10px 0;
     }
 
     #avatar {
@@ -133,9 +124,12 @@ body {
         width: 64px;
         width: 64px;
     }
+    
+    #links { flex-direction: column; }
 
-    #username {
-        margin: 10px 0;
+    #links:hover {
+        height: 240px;
+        padding: 20px 0;
     }
 }
 
@@ -160,6 +154,7 @@ body {
 
     #username {
         font-size: 36px;
+        margin: 10px 0;
     }
 
     #avatar {
@@ -171,8 +166,11 @@ body {
         width: 64px;
     }
 
-    #username {
-        margin: 10px 0;
+    #links { flex-direction: column; }
+
+    #links:hover {
+        height: 240px;
+        padding: 20px 0;
     }
 }
 
@@ -184,19 +182,18 @@ body {
         border-radius: 75px;
     }
 
-    #changelog-card { font-size: 36px;}
+    #changelog-card { font-size: 36px; }
 
     .button {
         top: 40px; right: 40px;
         border-radius: 75px;
     }
     
-    #pfp {
-        height: 450px;
-    }
+    #pfp { height: 450px; }
 
-    #username {
-        font-size: 32px;
+    #username { 
+        font-size: 32px; 
+        margin: 10px 0; 
     }
 
     #avatar {
@@ -207,9 +204,14 @@ body {
         width: 64px;
         width: 64px;
     }
+}
 
-    #username {
-        margin: 10px 0;
+@media (orientation: portrait) {
+    #links { flex-direction: row; }
+
+    #links:hover {
+        width: 240px;
+        padding: 0 20px;
     }
 }
 
@@ -218,6 +220,7 @@ body {
     position: absolute;
     background-color: #181818af;
     backdrop-filter: blur(15px);
+    z-index: 2;
 }
 
 #changelog-card {
@@ -230,6 +233,14 @@ body {
     transition: .2s;
     overflow-y: scroll;
     padding: 25px;
+}
+
+#changelog-card .change:first-child {
+    margin: 0;
+}
+
+#changelog-card .change {
+    margin: 50px 0;
 }
 
 #card {
@@ -311,4 +322,58 @@ li {
 
 .crossed {
     text-decoration: line-through;
+}
+
+#links {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #2c2c2c7f;
+    border: 3px solid #4d4d4d7f;
+    border-radius: 50px;
+    box-shadow: 0 0 60px 20px #0000009d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .2s;
+}
+
+#links:hover {
+    justify-content: space-between;
+}
+
+#links a {
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
+    transition: .2s;
+}
+
+#links:hover a {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+#links-icon {
+    position: absolute;
+    width: 35px;
+    transition: .2s;
+}
+
+#links:hover #links-icon {
+    opacity: 0;
+    transform: scale(.5);
+}
+
+.link {
+    width: 35px;
+    filter: invert();
+}
+
+.cherw-icon {
+    width: 35px;
 }
