@@ -28,6 +28,22 @@ body {
     border: 2px solid #ddd;
     outline: 2px solid #ddd;
     outline-offset: 5px;
+    z-index: 2;
+    background-color: black;
+}
+
+#background {
+    position: absolute;
+}
+
+#background > .card {
+    border: 2px solid #3f3f3f;
+    outline: 2px solid #3f3f3f;
+    z-index: 1;
+    color: #3f3f3f;
+}
+
+.animated {
     animation: window 1.5s steps(4) infinite alternate;
 }
 
