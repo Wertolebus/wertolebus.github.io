@@ -39,9 +39,19 @@ body {
 }
 
 #links {
-    right: 15%;
+    right: 5%;
     bottom: 16%;
     padding: 25px 20px;
+}
+
+#taro {
+    left: 5%;
+    top: 12%;
+}
+
+#taro > img {
+    width: 312px;
+    cursor: pointer;
 }
 
 .close-button {
@@ -56,6 +66,16 @@ body {
     background-color: black;
     left: 12px;
     top: -12px;
+}
+
+.taro-title {
+    position: absolute;
+    background-color: black;
+    text-align: center;
+    bottom: -12px;
+    left: 12px;
+    right: 12px;
+    width: fit-content;
 }
 
 #links > *:not(.ui) {
@@ -76,4 +96,5 @@ a:hover {
 
 img {
     width: 256px;
+    image-rendering: pixelated;
 }
