@@ -1,0 +1,75 @@
+@font-face {
+    font-family: WindowsCommandPrompt;
+    src: url('/assets/font.ttf')
+}
+
+@keyframes window {
+    from { transform: translateY(25px); }
+    to { transform: translateY(-25px); }
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: #000;
+    color: #ddd;
+    font-family: WindowsCommandPrompt;
+    font-size: 24px;
+}
+
+.card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    outline: 2px solid #ddd;
+    outline-offset: 5px;
+    animation: window 1.5s steps(4) infinite alternate;
+}
+
+#profile {
+    left: 40%;
+    top: 16%;
+    padding: 25px 20px;
+    justify-content: center;
+}
+
+#links {
+    right: 15%;
+    bottom: 16%;
+    padding: 25px 20px;
+}
+
+.close-button {
+    position: absolute;
+    background-color: black;
+    right: 12px;
+    top: -12px;
+}
+
+.title {
+    position: absolute;
+    background-color: black;
+    left: 12px;
+    top: -12px;
+}
+
+#links > *:not(.ui) {
+    padding: 8px 20px;
+}
+
+#profile > *:not(.ui) {
+    padding: 15px;
+}
+
+a {
+    color: #ddd;
+}
+
+a:hover {
+    text-decoration-style: double;
+}

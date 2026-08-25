@@ -1,71 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="zboxjpg, wertolebus">
-    <meta name="description" content="фурион фурион по фарму чемпион">
-    <meta name="theme-color" content="#dd2020">
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/scrollbar.css">
-    <link rel="shortcut icon" href="/assets/cherw.png" type="image/x-icon">
-    <title>zboxjpg</title>
-</head>
-<body onmousemove="get_mouse_pos(event)">
-    <div id="card">
-        <div class="button" onclick="show_changelog()"><img src="/assets/menu.png"></div>
-        <div id="pfp">
-            <img src="/assets/avatar.png" alt="avatar" id="avatar" onclick="meep_merp()">
-            <div id="cherw-container"><img src="/assets/cherw.png" id="cherw"></div>
-            <span id="username" onclick="toggle()">zboxjpg</span>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/main.css">
+        <title>zboxjpg</title>
+    </head>
+    <body>
+        <div class="card" id="profile">
+            <span class="ui title">[ PROFILE ]</span>
+            <span class="ui close-button">[ x ]</span>
+            <span>@zboxjpg</span>
+            <img src="/assets/avatar.png">
         </div>
-    </div>
-    <div id="changelog">
-        <div class="button" onclick="close_changelog()"><img id="close" src="/assets/close.png" alt=""></div>
-        <div id="changelog-card">
-            <div class="change">
-                <span class="date">31.03.2026</span>
-                <ul>
-                    <li>Updated avatar</li>
-                </ul>
-            </div>
-            <div class="change">
-                <span class="date">10.12.2025</span>
-                <ul>
-                    <li>Fix: tapping the right edge of link buttons on touch devices opened a random link</li>
-                </ul>
-            </div>
-            <div class="change">
-                <span class="date">09.12.2025</span>
-                <ul>
-                    <li>Added links</li>
-                </ul>
-            </div>
-            <div class="change">
-                <span class="date">08.12.2025</span>
-                <ul>
-                    <li>Added changelog tab</li>
-                    <li>Added "Meep Merp" sound</li>
-                    <li>Added fancy scrollbar</li>
-                    <li>Updated resolution support</li>
-                </ul>
-            </div>
-            <div class="change">
-                <span class="date">07.12.2025</span>
-                <ul>
-                    <li>Created page</li>
-                    <li>Added <span class="crossed">nickname randomizer</span> silly worm</li>
-                    <li>Added resolution support</li>
-                </ul>
-            </div>            
+        <div class="card" id="links">
+            <span class="ui title">[ LINKS ]</span>
+            <span class="ui close-button">[ x ]</span>
+            <a target="_blank" href="https://github.com/wertolebus/">github/wertolebus</a>
+            <a target="_blank" href="https://youtube.com/@zboxjpg">youtube/zboxjpg</a>
         </div>
-    </div>
-    <div id="links">
-        <a target="_blank" href="https://wertolebus.github.io"><img src="/assets/cherw.png" class="cherw-icon"></a>
-        <a target="_blank" href="https://youtube.com/@zboxjpg"><img src="/assets/youtube.png" class="link"></a>
-        <a target="_blank" href="https://github.com/wertolebus"><img src="/assets/github.svg" class="link"></a>
-        <img src="/assets/links.png" id="links-icon">
-    </div>
-</body>
-<script src="/scripts/main.js"></script>
+    </body>
 </html>
