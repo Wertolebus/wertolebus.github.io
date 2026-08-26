@@ -15,8 +15,8 @@
 }
 
 body {
-    background-color: #000;
-    color: #ddd;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: WindowsCommandPrompt;
     font-size: 24px;
 }
@@ -25,11 +25,11 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    border: 2px solid #ddd;
-    outline: 2px solid #ddd;
+    border: 2px solid var(--border-color);
+    outline: 2px solid var(--border-color);
     outline-offset: 5px;
     z-index: 2;
-    background-color: black;
+    background-color: var(--background-color);
 }
 
 #background {
@@ -37,14 +37,23 @@ body {
 }
 
 #background > .card {
-    border: 2px solid #3f3f3f;
-    outline: 2px solid #3f3f3f;
+    border: 2px solid var(--bg-border-color);
+    outline: 2px solid var(--bg-border-color);
     z-index: 1;
-    color: #3f3f3f;
+    color: var(--bg-border-color);
+    background-color: var(--bg-background-color);
+}
+
+#background > .card > * {
+    background-color: var(--bg-background-color);
 }
 
 .animated {
     animation: window 1.5s steps(4) infinite alternate;
+}
+
+.selected {
+    text-decoration: underline;
 }
 
 #profile {
@@ -63,6 +72,15 @@ body {
 #taro {
     left: 5%;
     top: 12%;
+    padding: 15px;
+    background-color: var(--background-color);
+}
+
+#themes {
+    right: 7%;
+    top: 13%;
+    padding: 25px 50px;
+    justify-content: space-evenly;
 }
 
 #taro > img {
@@ -72,21 +90,28 @@ body {
 
 .close-button {
     position: absolute;
-    background-color: black;
+    background-color: var(--background-color);
     right: 12px;
     top: -12px;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .title {
     position: absolute;
-    background-color: black;
+    background-color: var(--background-color);
     left: 12px;
     top: -12px;
 }
 
 .taro-title {
     position: absolute;
-    background-color: black;
+    background-color: var(--background-color);
     text-align: center;
     bottom: -12px;
     left: 12px;

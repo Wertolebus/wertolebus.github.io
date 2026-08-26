@@ -1,0 +1,23 @@
+body {
+    --text-color: #ddd; 
+    --border-color: #ddd;
+    --background-color: #000;
+    --bg-border-color: #3f3f3f;
+    --bg-background-color: #000;
+}
+
+body.ayu {
+    --text-color: #bfbdb6;
+    --border-color: #bfbdb6;
+    --background-color: #0b0e14;
+    --bg-border-color: #a09d92;
+    --bg-background-color: #050408;
+}
+
+body.monokai {
+    --text-color: #d6d6d6;
+    --border-color: #d6d6d6;
+    --background-color: #2e2e2e;
+    --bg-border-color: #7f7f7f;
+    --bg-background-color: #1a1a1a;
+}

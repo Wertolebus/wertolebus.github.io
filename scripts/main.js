@@ -21,6 +21,10 @@ function refresh_isaac_card() {
     document.querySelector('#taro > img').src = `/assets/tboi/${card}.png`;
 }
 
+function change_theme(theme) {
+    document.body.classList = theme;
+}
+
 function bg_spawn_window(x, y, w, h) {
     let bg = document.querySelector("#background");
     let card = document.createElement("div");
@@ -41,4 +45,6 @@ for (let i = 0; i < 25; i++) {
     let y = get_random_int(3, window.innerHeight - h - 50);
     bg_spawn_window(`${x}px`, `${y}px`, `${w}px`, `${h}px`);
 }
+
+change_theme('monokai')
 refresh_isaac_card();

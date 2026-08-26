@@ -2,11 +2,18 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/themes.css">
         <title>zboxjpg</title>
     </head>
     <body>
-        <div id="background">
+        <div id="background"></div>
+        <div class="card" id="themes">
+            <span class="ui title">[ THEMES ]</span>
+            <span class="ui close-button">[ x ]</span>
 
+            <span onclick="change_theme('monokai')">monokai</span>
+            <span onclick="change_theme('ayu')">ayu</span>
+            <span onclick="change_theme('')">classic</span>
         </div>
         <div class="card" id="profile">
             <span class="ui title">[ PROFILE ]</span>
