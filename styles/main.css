@@ -34,6 +34,8 @@ body {
 
 #background {
     position: absolute;
+    width: 100%; 
+    height: 100%; 
 }
 
 #background > .card {
@@ -152,4 +154,17 @@ a:hover {
 img {
     width: 256px;
     image-rendering: pixelated;
+}
+
+@media(max-width: 1366px) {
+    #taro > img{
+        width: 225px;
+    }
+}
+
+#mobile {
+    position: absolute;
+    left: calc(50% - 24px);
+    top: calc(50% - (69.33px) / 2);
+    width: 48px;
 }

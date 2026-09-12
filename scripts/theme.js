@@ -8,3 +8,4 @@ function change_theme(theme) {
 }
 
 change_theme('monokai') // currently default cuz i like it
+if (isMobile()) { change_theme('') }

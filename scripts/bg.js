@@ -17,10 +17,12 @@ function bg_spawn_window(x, y, w, h) {
     bg.appendChild(card);
 }
 
-for (let i = 0; i < 25; i++) {
-    let w = get_random_int(200, 350);
-    let h = get_random_int(200, 350);
-    let x = get_random_int(3, window.innerWidth - w - 3);
-    let y = get_random_int(3, window.innerHeight - h - 50);
-    bg_spawn_window(`${x}px`, `${y}px`, `${w}px`, `${h}px`);
+if (!isMobile()) {
+    for (let i = 0; i < 25; i++) {
+        let w = get_random_int(200, 350);
+        let h = get_random_int(200, 350);
+        let x = get_random_int(3, window.innerWidth - w - 3);
+        let y = get_random_int(3, window.innerHeight - h - 50);
+        bg_spawn_window(`${x}px`, `${y}px`, `${w}px`, `${h}px`);
+    }
 }
